@@ -1,0 +1,12 @@
+{
+  "name": "AzubiTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  },
+  "scripts":{
+    "build-css": "tailwindcss -i ./styles/input.css -o ./styles/styles.css --watch"
+  }
+}

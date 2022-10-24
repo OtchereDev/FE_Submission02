@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div>
+    
+        <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+          <div class="flex-1 flex flex-col min-h-0  border-r">
+            <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+              <div class="flex items-center justify-center flex-shrink-0 px-4">
+                <img class="h-32 w-auto" src="/assets/img/Freddys_Logo.svg" alt="Logo">
+              </div>
+              <nav class=" flex-1 px-2 space-y-1 mt-16">
+                <a href="/dashboard.html" class=" text-2xl flex items-center px-2 py-2 font-medium rounded-md">
+                  Dashboard
+                </a>
+      
+                <a href="/orders.html" class="text-2xl flex items-center px-2 py-2 font-medium rounded-md">
+                  Orders
+                </a>
+      
+                <button id="logoutBtn"  class="text-2xl flex items-center px-2 py-2 font-medium rounded-md">
+                  
+                  Logout
+                </button>
+      
+               
+      
+              
+      
+              </nav>
+            </div>
+           
+          </div>
+        </div>
+        <div class="md:pl-64 flex flex-col flex-1">
+          
+          <main class="flex-1">
+            <div class="py-6">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+              </div>
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+               
+                <div class="py-4">
+                  <div class=" ">
+                    <div class="lg:w-10/12 flex gap-6">
+                        <div class="w-4/12  p-6 border rounded-md">
+                            <p class="text-sm">
+                                Today
+                            </p>
+                            <p id="today-data" class="text-xl font-medium mt-4">
+                                $1456 / 9 orders 
+                            </p>
+                        </div>
+                        <div class="w-4/12  p-6 border rounded-md">
+                            <p class="text-sm">
+                                Last Week
+                            </p>
+                            <p id="week-data" class="text-xl font-medium mt-4">
+                                $1456 / 9 orders 
+                            </p>
+                        </div>
+                        <div class="w-4/12  p-6 border rounded-md">
+                            <p class="text-sm">
+                                Last Month
+                            </p>
+                            <p id="month-data" class="text-xl font-medium mt-4">
+                                $1456 / 9 orders 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <div class="flex justify-between">
+
+                            <h3 id="chart-title" class="text-3xl font-medium">
+                                Revenue (last 7 days)
+                            </h3>
+                            <div>
+
+                                <label for="toggle" class="inline-flex relative items-center cursor-pointer">
+                                    <input type="checkbox" value="" id="toggle" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    
+                                  </label>
+                            </div>
+                        </div>
+                        <div class=" overflow-hidden relative mt-10">
+
+                            <canvas class="!w-[full] !h-[500px]" id="myChart" width="1000" height="1000"></canvas>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h4 class="text-3xl font-medium">
+                            Bestsellers
+                        </h4>
+
+                        <div class="border rounded-md mt-5">
+                            <table class="min-w-full divide-y divide-gray-300">
+                                <thead class="bg-gray-50">
+                                  <tr>
+                                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Product Name</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Price</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"># Unit Price</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Revenue</th>
+                                   
+                                  </tr>
+                                </thead>
+                                <tbody id="bestseller-table" class="divide-y divide-gray-200 bg-white">
+                                  
+                    
+                                 
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<
+
+<script  src="/js/chartmap.js" ></script>
+<script  src="/config/endpoints.js" ></script>
+<script  src="/services/Authentication.js"></script>
+<script  src="/services/Dashboard.js"></script>
+<script  src="/js/shared.js"></script>
+<script src="/js/dashboard.js"></script>
+
+</body>
+</html>
