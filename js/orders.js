@@ -69,6 +69,8 @@ inputContainer.addEventListener("submit", async (e) => {
       currentPage = page;
       totalPage = Math.ceil(total / orders?.length);
       populateTable(orders);
+      pageText.innerText = currentPage;
+      pageTotalText.innerText = totalPage;
       if (currentPage == 1) {
         prevBtn.classList.add("hidden");
       }
